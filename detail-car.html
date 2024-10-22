@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav-1">
+        <p class="title">MORENT</p>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search something here.."
+          />
+        </div>
+      </div>
+
+      <div class="nav-2">
+        <img src="assets/Like.png" alt="Like" class="menu-item" />
+        <img
+          src="assets/Notification.png"
+          alt="Notification"
+          class="menu-item"
+        />
+        <img src="assets/Settings.png" alt="Settings" class="menu-item" />
+        <img id="hamburger" src="assets/Profil.png" alt="Profile" />
+      </div>
+    </nav>
+    <div id="dropdown-menu" class="dropdown-hidden">
+      <img src="assets/Like.png" alt="Like" />
+      <img src="assets/Notification.png" alt="Notification" />
+      <img src="assets/Settings.png" alt="Settings" />
+    </div>
+    
+<main  class="content">
+  <section id="categories" class="switch-2">
+    <div class="close-btn" id="closeSidebar">&times;</div>
+    <div class="types">
+      <p class="categories-titles">Type</p>
+      <label>
+        <input type="checkbox" name="type" value="Sport" /> Sport </label
+      ><br />
+      <label> <input type="checkbox" name="type" value="SUV" /> SUV </label
+      ><br />
+      <label> <input type="checkbox" name="type" value="MVP" /> MVP </label
+      ><br />
+      <label>
+        <input type="checkbox" name="type" value="Sedan" /> Sedan </label
+      ><br />
+      <label>
+        <input type="checkbox" name="type" value="Coupe" /> Coupe </label
+      ><br />
+      <label>
+        <input type="checkbox" name="type" value="Hatchback" /> Hatchback
+      </label>
+    </div>
+
+    <div class="capacity">
+      <p class="categories-titles">Capacity</p>
+      <label>
+        <input type="checkbox" name="capacity" value="2" /> 2 Person </label
+      ><br />
+      <label>
+        <input type="checkbox" name="capacity" value="4" /> 4 Person </label
+      ><br />
+      <label>
+        <input type="checkbox" name="capacity" value="6" /> 6 Person </label
+      ><br />
+      <label>
+        <input type="checkbox" name="capacity" value="8" /> 8 Person
+      </label>
+    </div>
+  </section>
+    
+<section class="page">
+    <div class="ad-and-card">
+      <div class="car-catalogue">
+        <div class="card-slide">
+          <div class="ad-content">
+            <p class="title-ad">The Best Platform for Car Rental</p>
+            <div class="subtitle-ad">
+              Ease of doing a car rental safely and reliably. Of course at a low
+              price.
+            </div>
+            <button class="btn-ad-1">Rental car</button>
+          </div>
+          <img id="adImage" class="ad-1-img" src="assets/image 7.png" />
+        </div>
+        <div class="slide-car">
+          <img class="view-car" src="assets/view1.png" />
+          <img class="view-car" src="assets/view1.png" />
+          <img class="view-car" src="assets/view3.png" />
+        </div>
+      </div>
+      
+    
+      <div class="card" id="card">
+        <div class="card-line-1" id="card-line-1">
+          <div class="card-details">
+            <p class="car-name">Nissan Gt-R</p>
+            <div class="stars" id="stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+          <img class="heart" id="heart2" src="assets/heart.svg" />
+        </div>
+        <p class="car-paragraph">
+          NISMO has become the embodiment of Nissan's outstanding performance,
+          inspired by the most unforgiving proving ground, the "race track".
+        </p>
+        <div class="car-details-2">
+          <p class="categories-titles">Type car<span> Sport</span></p>
+          <p class="categories-titles">Cpacity<span> 2 person</span></p>
+        </div>
+        <div class="car-details-2">
+          <p class="categories-titles">Steering<span> Manuel</span></p>
+          <p class="categories-titles">gasoline<span> 70L</span></p>
+        </div>
+        <div class="action" id="action">
+          <div>
+            <p class="price">&dollar;99.99/ <span>day</span></p>
+            <p class="remise">&#36;100.00</p>
+          </div>
+          <button class="btn-ad-1">Rent now</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="add-review">
+      <button class="btn-ad-1" onclick="toggleReviewForm()" >Add Your Review</button>
+      <form id="reviewForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="title" placeholder="Your Job Title" required>
+        <input type="date" id="date" required>
+        <textarea id="description" placeholder="Your Review" required></textarea>
+        
+        <label for="rating">Rating:</label>
+        <div class="rating">
+          <span class="fa fa-star grey" data-value="1"></span>
+          <span class="fa fa-star grey" data-value="2"></span>
+          <span class="fa fa-star grey" data-value="3"></span>
+          <span class="fa fa-star grey" data-value="4"></span>
+          <span class="fa fa-star grey" data-value="5"></span>
+        </div>
+        
+        <button type="button" onclick="addReview()">Submit Review</button>
+      </form>
+      
+      
+  </div>
+
+
+
+
+
+
+    <section class="reviews">
+        
+        <div class="review-number">
+      <p class="review-title">Reviews</p>
+        <div class="number">
+            <p id="review-count">13</p>
+        </div>
+        </div>
+<div id="reviews-container">
+        <div class="review">
+           <div class="review-details">
+
+           
+           <div class="review-person">
+            <img src="assets/Profil.png">
+            <div class="reviewer-profile">
+           <p class="reviwer-name">
+            alex stanton
+        
+           </p>
+           <p class="reviwer-title">
+CEO at Bukalapak
+           </p>
+           </div>
+        </div> 
+           <div class="date-and-review">
+            <p class="date">
+                21 July 2022
+            </p>
+            <div class="review-stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+           
+           </div>
+        </div>
+           <p class="car-description" >
+            We are very happy with the service from the MORENT 
+            App. Morent has a low price and also a large variety of cars
+             with good and comfortable facilities. In addition, the service
+              provided by the officers
+             is also very friendly and very polite.
+        </p>
+        </div>
+   
+
+
+
+
+
+        <div class="review">
+            <div class="review-details">
+ 
+            
+            <div class="review-person">
+             <img src="assets/Profil.png">
+             <div class="reviewer-profile">
+            <p class="reviwer-name">
+             alex stanton
+         
+            </p>
+            <p class="reviwer-title">
+ CEO at Bukalapak
+            </p>
+            </div>
+         </div> 
+            <div class="date-and-review">
+             <p class="date">
+                 21 July 2022
+             </p>
+             <div class="review-stars">
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+                 <span class="fa fa-star"></span>
+             </div>
+            
+            </div>
+         </div>
+            <p class="car-description" >
+             We are very happy with the service from the MORENT 
+             App. Morent has a low price and also a large variety of cars
+              with good and comfortable facilities. In addition, the service
+               provided by the officers
+              is also very friendly and very polite.
+         </p>
+         </div>
+
+
+
+
+
+         <div class="review">
+            <div class="review-details">
+ 
+            
+            <div class="review-person">
+             <img src="assets/Profil.png">
+             <div class="reviewer-profile">
+            <p class="reviwer-name">
+             alex stanton
+         
+            </p>
+            <p class="reviwer-title">
+ CEO at Bukalapak
+            </p>
+            </div>
+         </div> 
+            <div class="date-and-review">
+             <p class="date">
+                 21 July 2022
+             </p>
+             <div class="review-stars">
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+                 <span class="fa fa-star"></span>
+             </div>
+            
+            </div>
+         </div>
+            <p class="car-description" >
+             We are very happy with the service from the MORENT 
+             App. Morent has a low price and also a large variety of cars
+              with good and comfortable facilities. In addition, the service
+               provided by the officers
+              is also very friendly and very polite.
+         </p>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="all-cars">
+        <div class="popular-cars">
+      <div class="popular-cars-details">
+        <p class="popular-cars-title">Recent Car</p>
+        <p class="view-all">Vieaw all</p>
+      </div>
+      <div class="cars">
+      
+    
+        <div class="card">
+            <div class="card-line-1">
+              <div class="card-details">
+                <p class="car-name">Nissan Gt-R</p>
+                <p class="car-type">Sport</p>
+              </div>
+              <img class="heart" id="heart-2" src="assets/heart.svg" />
+            </div>
+            <img class="card-img" src="assets/image 7.png" />
+            <div class="car-details">
+              <div class="gas">
+                <img src="assets/gas.png" />
+                <p>90L</p>
+              </div>
+              <div class="manual">
+                <img src="assets/manual.png" />
+                <p>Manual</p>
+              </div>
+              <div class="people">
+                <img src="assets/people.png" />
+                <p>2 People</p>
+              </div>
+            </div>
+            <div class="action">
+              <p class="price">&dollar;99.99/ <span>day</span></p>
+              <button class="btn-ad-1">Rent now</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-line-1">
+              <div class="card-details">
+                <p class="car-name">Nissan Gt-R</p>
+                <p class="car-type">Sport</p>
+              </div>
+              <img class="heart" id="heart-3" src="assets/heart.svg" />
+            </div>
+            <img class="card-img" src="assets/image 7.png" />
+            <div class="car-details">
+              <div class="gas">
+                <img src="assets/gas.png" />
+                <p>90L</p>
+              </div>
+              <div class="manual">
+                <img src="assets/manual.png" />
+                <p>Manual</p>
+              </div>
+              <div class="people">
+                <img src="assets/people.png" />
+                <p>2 People</p>
+              </div>
+            </div>
+            <div class="action">
+              <p class="price">&dollar;99.99/ <span>day</span></p>
+              <button class="btn-ad-1">Rent now</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-line-1">
+              <div class="card-details">
+                <p class="car-name">Nissan Gt-R</p>
+                <p class="car-type">Sport</p>
+              </div>
+              <img class="heart" id="heart-4" src="assets/heart.svg" />
+            </div>
+            <img class="card-img" src="assets/image 7.png" />
+            <div class="car-details">
+              <div class="gas">
+                <img src="assets/gas.png" />
+                <p>90L</p>
+              </div>
+              <div class="manual">
+                <img src="assets/manual.png" />
+                <p>Manual</p>
+              </div>
+              <div class="people">
+                <img src="assets/people.png" />
+                <p>2 People</p>
+              </div>
+            </div>
+            <div class="action">
+              <p class="price">&dollar;99.99/ <span>day</span></p>
+              <button class="btn-ad-1">Rent now</button>
+            </div>
+          </div>
+    
+         
+    
+          
+    
+    
+        </div>
+      </div>
+    
+    
+    
+      <div class="recommanded-cars">
+        <div class="popular-cars-details">
+          <p class="popular-cars-title">Recommendation cars cars</p>
+        </div>
+        <div class="cars">
+          
+    
+          
+    
+            <div class="card">
+              <div class="card-line-1">
+                <div class="card-details">
+                  <p class="car-name">Nissan Gt-R</p>
+                  <p class="car-type">Sport</p>
+                </div>
+                <img class="heart" id="heart-7" src="assets/heart.svg" />
+              </div>
+              <img class="card-img" src="assets/image 7.png" />
+              <div class="car-details">
+                <div class="gas">
+                  <img src="assets/gas.png" />
+                  <p>90L</p>
+                </div>
+                <div class="manual">
+                  <img src="assets/manual.png" />
+                  <p>Manual</p>
+                </div>
+                <div class="people">
+                  <img src="assets/people.png" />
+                  <p>2 People</p>
+                </div>
+              </div>
+              <div class="action">
+                <p class="price">&dollar;99.99/ <span>day</span></p>
+                <button class="btn-ad-1">Rent now</button>
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="card-line-1">
+                <div class="card-details">
+                  <p class="car-name">Nissan Gt-R</p>
+                  <p class="car-type">Sport</p>
+                </div>
+                <img class="heart" id="heart-8" src="assets/heart.svg" />
+              </div>
+              <img class="card-img" src="assets/image 7.png" />
+              <div class="car-details">
+                <div class="gas">
+                  <img src="assets/gas.png" />
+                  <p>90L</p>
+                </div>
+                <div class="manual">
+                  <img src="assets/manual.png" />
+                  <p>Manual</p>
+                </div>
+                <div class="people">
+                  <img src="assets/people.png" />
+                  <p>2 People</p>
+                </div>
+              </div>
+              <div class="action">
+                <p class="price">&dollar;99.99/ <span>day</span></p>
+                <button class="btn-ad-1">Rent now</button>
+              </div>
+            </div>
+    
+           
+            <div class="card">
+                <div class="card-line-1">
+                  <div class="card-details">
+                    <p class="car-name">Nissan Gt-R</p>
+                    <p class="car-type">Sport</p>
+                  </div>
+                  <img class="heart" id="heart-9" src="assets/heart.svg" />
+                </div>
+                <img class="card-img" src="assets/image 7.png" />
+                <div class="car-details">
+                  <div class="gas">
+                    <img src="assets/gas.png" />
+                    <p>90L</p>
+                  </div>
+                  <div class="manual">
+                    <img src="assets/manual.png" />
+                    <p>Manual</p>
+                  </div>
+                  <div class="people">
+                    <img src="assets/people.png" />
+                    <p>2 People</p>
+                  </div>
+                </div>
+                <div class="action">
+                  <p class="price">&dollar;99.99/ <span>day</span></p>
+                  <button class="btn-ad-1">Rent now</button>
+                </div>
+              </div>
+    
+              <div class="card">
+                <div class="card-line-1">
+                  <div class="card-details">
+                    <p class="car-name">Nissan Gt-R</p>
+                    <p class="car-type">Sport</p>
+                  </div>
+                  <img class="heart" id="heart-10" src="assets/heart.svg" />
+                </div>
+                <img class="card-img" src="assets/image 7.png" />
+                <div class="car-details">
+                  <div class="gas">
+                    <img src="assets/gas.png" />
+                    <p>90L</p>
+                  </div>
+                  <div class="manual">
+                    <img src="assets/manual.png" />
+                    <p>Manual</p>
+                  </div>
+                  <div class="people">
+                    <img src="assets/people.png" />
+                    <p>2 People</p>
+                  </div>
+                </div>
+                <div class="action">
+                  <p class="price">&dollar;99.99/ <span>day</span></p>
+                  <button class="btn-ad-1">Rent now</button>
+                </div>
+              </div>
+    
+              <div class="card">
+                <div class="card-line-1">
+                  <div class="card-details">
+                    <p class="car-name">Nissan Gt-R</p>
+                    <p class="car-type">Sport</p>
+                  </div>
+                  <img class="heart" id="heart-11" src="assets/heart.svg" />
+                </div>
+                <img class="card-img" src="assets/image 7.png" />
+                <div class="car-details">
+                  <div class="gas">
+                    <img src="assets/gas.png" />
+                    <p>90L</p>
+                  </div>
+                  <div class="manual">
+                    <img src="assets/manual.png" />
+                    <p>Manual</p>
+                  </div>
+                  <div class="people">
+                    <img src="assets/people.png" />
+                    <p>2 People</p>
+                  </div>
+                </div>
+                <div class="action">
+                  <p class="price">&dollar;99.99/ <span>day</span></p>
+                  <button class="btn-ad-1">Rent now</button>
+                </div>
+              </div>
+    
+              <div class="card">
+                <div class="card-line-1">
+                  <div class="card-details">
+                    <p class="car-name">Nissan Gt-R</p>
+                    <p class="car-type">Sport</p>
+                  </div>
+                  <img class="heart" id="heart-12" src="assets/heart.svg" />
+                </div>
+                <img class="card-img" src="assets/image 7.png" />
+                <div class="car-details">
+                  <div class="gas">
+                    <img src="assets/gas.png" />
+                    <p>90L</p>
+                  </div>
+                  <div class="manual">
+                    <img src="assets/manual.png" />
+                    <p>Manual</p>
+                  </div>
+                  <div class="people">
+                    <img src="assets/people.png" />
+                    <p>2 People</p>
+                  </div>
+                </div>
+                <div class="action">
+                  <p class="price">&dollar;99.99/ <span>day</span></p>
+                  <button class="btn-ad-1">Rent now</button>
+                </div>
+              </div>
+    
+            
+    
+    
+          </div>
+        </div>
+        <button class="btn-ad-1">Show more cars</button>
+    
+    </section>
+</section>
+   
+
+
+
+
+
+    
+</main>
+
+
+
+
+
+
+
+
+<footer>
+<ul class="main-footer">
+<li class="list-1">
+    <p class="title">
+MORNET
+    </p>
+    <pre class="f-subtitle">
+Our vision is to provide convenienceand
+help increase your sales business.
+    </pre>
+</li>
+<li>
+  <p class="mini-title">
+About
+  </p> 
+  <p class="f-subtitle">
+    How it works
+  </p>
+  <p class="f-subtitle">
+    Featured
+  </p>
+  <p class="f-subtitle">
+    Partnership
+  </p>
+  <p class="f-subtitle">
+    Bussiness Relation
+  </p> 
+</li>
+<li>
+    <p class="mini-title">
+        Community
+              </p> 
+              <p class="f-subtitle">
+                Events
+              </p>
+              <p class="f-subtitle">
+               Blog
+              </p>
+              <p class="f-subtitle">
+                Podcast
+              </p>
+              <p class="f-subtitle">
+                Invite friend
+              </p>   
+</li>
+<li>
+    <p class="mini-title">
+      Socials
+              </p> 
+              <p class="f-subtitle">
+                Discord
+              </p>
+              <p class="f-subtitle">
+                Instagram
+              </p>
+              <p class="f-subtitle">
+                Twitter
+              </p>
+              <p class="f-subtitle">
+                Facebook
+              </p>    
+</li>
+</ul>
+<div class="privacy-policy">
+<p>©2022 MORENT. All rights reserved</p>
+<p>Privacy &amp; Policy</p>
+<p>Terms &amp;Condition</p>
+</div>
+
+
+
+
+</footer>
+
+<script src="javascript.js"></script>
+
+  </body>
+</html>
